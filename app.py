@@ -300,6 +300,73 @@ def treatment_for(condition):
 # Page
 # ---------------------------------------------------------------------------
 
+
+st.markdown(
+    """
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+html, body, [class*="css"] { font-family: 'Plus Jakarta Sans', sans-serif; }
+.stApp {
+    background: radial-gradient(circle at 85% 10%, #E6EFD3 0%, #F6F8F1 45%, #FBFCF7 100%);
+}
+[data-testid="stSidebar"] { background: #EEF4E6; border-right: 1px solid #D5E3C4; }
+h1, h2, h3 { color: #14432F !important; font-weight: 800 !important; letter-spacing: -0.5px; }
+.pill {
+    display: inline-block; background: #ffffff; border: 1px solid #D5E3C4;
+    color: #1B4D3E; padding: 8px 18px; border-radius: 999px;
+    font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+}
+.hero-h { font-size: 3.2rem; font-weight: 800; color: #14432F; line-height: 1.05; margin: 18px 0 6px 0; letter-spacing: -2px; }
+.hero-h span { color: #8DB359; }
+.hero-line { width: 280px; height: 8px; border-radius: 99px; background: #D3E2A5; margin-bottom: 18px; }
+.hero-p { color: #5B6B62; font-size: 1.1rem; line-height: 1.7; max-width: 640px; }
+.checks { margin: 14px 0 22px 0; color: #14432F; font-weight: 600; }
+.checks span { margin-right: 26px; }
+.tips {
+    background: #1B4D3E; border-radius: 24px; padding: 26px 30px; margin: 10px 0 26px 0;
+    box-shadow: 0 14px 34px rgba(27, 77, 62, 0.25);
+}
+.tips h3 { color: #ffffff !important; margin: 0 0 14px 0; }
+.tip { display: flex; gap: 14px; margin-bottom: 14px; }
+.num {
+    min-width: 40px; height: 40px; border-radius: 50%; background: #2C6B57;
+    color: #D3E2A5; display: flex; align-items: center; justify-content: center; font-weight: 800;
+}
+.tip b { color: #ffffff; }
+.tip div div { color: #BFD8CB; font-size: 0.92rem; }
+.note {
+    border: 1px solid #3E7A66; background: rgba(255, 255, 255, 0.06);
+    color: #E3F1E8; padding: 14px 18px; border-radius: 16px; font-size: 0.92rem;
+}
+[data-testid="stFileUploader"] section {
+    border: 2px dashed #A9C98B; border-radius: 24px; background: #FBFDF7; padding: 28px;
+}
+[data-testid="stFileUploader"] button {
+    background: #1B4D3E; color: #ffffff; border-radius: 999px; border: none; padding: 8px 22px;
+}
+[data-testid="stImage"] img { border-radius: 20px; box-shadow: 0 10px 28px rgba(20, 67, 47, 0.18); }
+[data-testid="stAlert"] { border-radius: 16px; }
+[data-testid="stExpander"] { border: 1px solid #D5E3C4; border-radius: 16px; background: #ffffff; }
+[data-testid="stDataFrame"] { border-radius: 16px; overflow: hidden; }
+.stProgress > div > div > div > div { background: linear-gradient(90deg, #1B4D3E, #8DB359); }
+</style>
+
+<div class="pill">Plant health, explained simply</div>
+<div class="hero-h">Healthier plants start with <br>a <span>closer look.</span></div>
+<div class="hero-line"></div>
+<div class="hero-p">Upload a clear photo of one leaf. LeafCare helps identify the plant, spot signs of disease, and explains practical next steps.</div>
+<div class="checks"><span>&#10003; 38 conditions</span><span>&#10003; 14 plant species</span><span>&#10003; Simple care guidance</span></div>
+
+<div class="tips">
+  <h3>For a better scan</h3>
+  <div class="tip"><div class="num">01</div><div><b>Use natural light</b><div>Avoid strong shadows and yellow indoor light.</div></div></div>
+  <div class="tip"><div class="num">02</div><div><b>Show one full leaf</b><div>Keep the leaf sharp and near the center.</div></div></div>
+  <div class="tip"><div class="num">03</div><div><b>Keep the background simple</b><div>Avoid hands, soil, and other leaves when possible.</div></div></div>
+  <div class="note">LeafCare covers only its 14 trained plant species. Unknown plants may still be matched to a known class.</div>
+</div>
+""",
+    unsafe_allow_html=True,
+)
 def main():
     st.title("🌿 LeafCare AI")
     st.caption("Upload one leaf. You get the plant, the disease, the confidence and a treatment plan.")
